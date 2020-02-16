@@ -2,46 +2,37 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
 	"vsFactoryAPIEngine/controllers"
-	"vsFactoryAPIEngine/core"
+	"vsFactoryAPIEngine/serviceRegister"
 )
 
 var apiController *controllers.MongoDBApiController
+var loginController *controllers.ApplyForServiceController
 func init(){
-	var err error
-	// apiController, err = controllers.NewMongoDBApiController(service.NewMongoService(), "mongodb://127.0.0.1:27017", "test")
-	if err != nil {
-		panic(err)
-	}
+	// api服务控制器
+	apiController = controllers.NewMongoDBApiController(serviceRegister.GetMemServiceRegister())
+	// 登录服务: 装饰器
+	loginController = controllers.NewLoginController(serviceRegister.GetMemServiceRegister())
 }
 
 func main() {
 	var err error
 	r := gin.Default()
-	// 服务注册
-	serviceGroup := r.Group("service"); {
-		bundleManager := core.NewRPCBundleManager()
-		serviceGroup.POST("/bind", func(c *gin.Context) {
-			err = bundleManager.Bind(c)
-			if err != nil {
-				panic(err)
-			}
-			// 注册服务
-			// 动态添加服务
-			err := bundleManager.RPCServe(serviceGroup, "HelloService", core.M{"data":"world1;world2"},
-				func(c *gin.Context, request core.IRPCBundleRequest, reply core.IRPCBundleResponse) {
-					c.String(http.StatusOK, reply.String())
-				})
-			if err != nil {
-				panic(err)
-			}
-		})
-	}
 	// API 服务
 	apiGroup := r.Group("api"); {
-		apiGroup.POST("/save", apiController.Saver("users"))
-		apiGroup.POST("/find", apiController.Finder("users"))
+		dbGroup := apiGroup.Group("db"); {
+			dbGroup.POST("/save", apiController.Saver())
+			//apiGroup.POST("/find", apiController.Finder("users"))
+			//apiGroup.POST("/delete", apiController.Deleter("users"))
+			//apiGroup.POST("/update", apiController.Updater("users"))
+		}
+		// 验证 服务
+		sessGroup := apiGroup.Group("sess"); {
+			// 登录 {servername, serverURL}	// "mongodb://127.0.0.1:27017"
+			sessGroup.POST("/login", loginController.ApplyForServiceHandler("127.0.0.1"))
+			// 查寻登录情况 {servername} // service.MongodbService
+			sessGroup.POST("/loginCheck", loginController.LoginCheckHandler())
+		}
 	}
 	err = r.Run(":8000")
 	if err != nil {

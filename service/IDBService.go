@@ -2,11 +2,12 @@ package service
 
 import (
 	"github.com/globalsign/mgo/bson"
-	"vsFactoryAPIEngine/dataAdapter"
 )
 
-type IJsonDBService interface {
-	Connect(url string, dbName string) (err error)
-	Save(collectionName string, data dataAdapter.IJsonAdapter) (err error)
-	Find(collectionName string, query dataAdapter.IJsonAdapter) (results []bson.M, err error)
+type IMongoDBService interface {
+	Save(collectionName string, data bson.M) (err error)
+	Find(collectionName string, query bson.M) (results []bson.M, err error)
+	Delete(collectionName string, query bson.M) (err error)
+	//Update(collectionName string, queryAndUpdate bson.M) (err error)
+	Disconnect()
 }
