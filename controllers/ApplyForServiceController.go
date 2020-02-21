@@ -11,8 +11,8 @@ import (
 
 // 用户申请服务控制器
 type ApplyForServiceController struct {
-	register serviceRegister.IServiceRegister	// 单例对象
-	factory *service.ServerFactory	// 单例对象
+	register serviceRegister.IServiceRegister // 单例对象
+	factory  *service.ServerFactory           // 单例对象
 }
 
 func NewLoginController(register serviceRegister.IServiceRegister) *ApplyForServiceController {
@@ -21,38 +21,37 @@ func NewLoginController(register serviceRegister.IServiceRegister) *ApplyForServ
 }
 
 // 登录 {servername, serverURL}	// "mongodb://127.0.0.1:27017"
-func (controller *ApplyForServiceController) ApplyForServiceHandler(domain string) func(c *gin.Context) {
+func (controller *ApplyForServiceController) ApplyForServiceHandler() func(c *gin.Context) {
 	return func(c *gin.Context) {
 		defer service.ControllerRecover()
+
 		userLoginJson := models.UserApplyForServiceInfo{}
 		if err := c.ShouldBindJSON(&userLoginJson); err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error(), "ok" : false})
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error(), "ok": false})
 			return
 		}
 
-		// 判断合法性
 		// uuid
-		uuidString, err := c.Cookie("uuid")
-		if err != nil {
-			// 没有获取到UUID, 发送UUID给客户端Cookie
-			// 并不能通过这个判断用户登录成功
+		uuidString := userLoginJson.Username
+
+		// 判断合法性
+		if uuidString == "" {
+			// 客户端没有获取到UUID, 发送UUID给客户端
 			u1 := uuid.NewV4()
-			uuidString := u1.String()
-			c.SetCookie("uuid", uuidString,3600,"/",domain,false,true)
+			uuidString = u1.String()
+			c.JSON(http.StatusOK, gin.H{"ok": true, "username": uuidString})
 		}
 
 		// 查询是否注册了该服务, 防止重复注册: (连接池有服务)
 		if controller.register.Valid(uuidString, userLoginJson.ServerName) {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "already login", "ok" : false})
+			c.JSON(http.StatusBadRequest, gin.H{"ok": false, "error": "already login"})
 			return
 		}
 
 		// 注册服务
 		s := controller.factory.GetServerByName(userLoginJson.ServerName, uuidString, userLoginJson.ServerURL)
 		controller.register.Register(uuidString, userLoginJson.ServerName, s)
-
-		// 回显
-		c.JSON(http.StatusBadRequest, gin.H{"ok": true})
+		c.JSON(http.StatusOK, gin.H{"ok": true, "username": uuidString})
 	}
 }
 
@@ -60,25 +59,29 @@ func (controller *ApplyForServiceController) ApplyForServiceHandler(domain strin
 func (controller *ApplyForServiceController) LoginCheckHandler() func(*gin.Context) {
 	return func(c *gin.Context) {
 		defer service.ControllerRecover()
+
+		// 获取用户登录信息
 		userLoginJson := models.UserApplyForServiceInfo{}
 		if err := c.ShouldBindJSON(&userLoginJson); err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+			c.JSON(http.StatusBadRequest, gin.H{"ok": false, "error": err.Error()})
 			return
 		}
 
 		// uuid
-		uuidString, err := c.Cookie("uuid")
-		if err != nil {
+		uuidString := userLoginJson.Username
+		//uuidString, err := c.Cookie("uuid")
+		ok := uuidString != ""
+		if !ok {
 			// 未进行登录
-			c.String(http.StatusOK, "false")
+			c.JSON(http.StatusOK, gin.H{"ok": true, "data": false})
 			return
 		}
 
 		// 查询是否注册了该服务
 		if controller.register.Valid(uuidString, userLoginJson.ServerName) {
-			c.String(http.StatusOK, "true")
-		}else{
-			c.String(http.StatusOK, "false")
+			c.JSON(http.StatusOK, gin.H{"ok": true, "data": true})
+		} else {
+			c.JSON(http.StatusOK, gin.H{"ok": true, "data": false})
 		}
 	}
 }

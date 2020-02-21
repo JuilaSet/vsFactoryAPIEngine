@@ -16,7 +16,7 @@ type SessionManager struct {
 
 var sessionManager *SessionManager
 
-func init(){
+func init() {
 	sessionManager = &SessionManager{store: sessions.NewCookieStore(Key)}
 }
 

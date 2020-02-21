@@ -12,7 +12,8 @@ type MemServiceRegister struct {
 
 // 单例对象
 var memRegister *MemServiceRegister
-func init(){
+
+func init() {
 	memRegister = &MemServiceRegister{s2u: make(map[string]IUserServicePool)}
 }
 
@@ -26,7 +27,7 @@ func (m *MemServiceRegister) Register(uuid string, serviceName string, server se
 		pool := NewMemUserServicePool()
 		pool.RegisterServe(serviceName, server)
 		m.s2u[uuid] = pool
-	}else {
+	} else {
 		// 注册服务
 		d.RegisterServe(serviceName, server)
 	}
@@ -65,4 +66,3 @@ func (m *MemUserServicePool) GetServe(servername string) (service.Server, bool) 
 	s, ok := m.spools[servername]
 	return s, ok
 }
-

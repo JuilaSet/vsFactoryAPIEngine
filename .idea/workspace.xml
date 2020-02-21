@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48802c9-042a-4f28-abe4-2994576f6381" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/UserInfo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ApplyForServiceController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/ServerFactory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceRegister/IServiceRegister.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serviceRegister/memServiceRegister.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/SessionManager.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/aes.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/signal.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/MongoDBApiController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/Cors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/DBApiController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/DBApiController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/IController.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/RPCBundleManager.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataAdapter/IDBAdapter.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataAdapter/jsonAdaptor.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserInfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserInfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.vsn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.vsn.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ApplyForServiceController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ApplyForServiceController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/DBApiController.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/go_build_vsFactoryAPIEngine.exe" beforeDir="false" afterPath="$PROJECT_DIR$/go_build_vsFactoryAPIEngine.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/IDBService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/IDBService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/MongoService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/MongoService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/ServerFactory.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/ServerFactory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceRegister/IServiceRegister.go" beforeDir="false" afterPath="$PROJECT_DIR$/serviceRegister/IServiceRegister.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceRegister/memServiceRegister.go" beforeDir="false" afterPath="$PROJECT_DIR$/serviceRegister/memServiceRegister.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/SessionManager.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/SessionManager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/signal.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/signal.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +33,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-105">
-              <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+            <state relative-caret-position="161">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/UserInfo.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/MongoDBApiController.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
               <folding>
-                <element signature="e#14#86#0" expanded="true" />
+                <element signature="e#236#297#0" />
+                <element signature="n#!!block;n#NewMongoDBApiController#0" />
+                <element signature="n#!!block;n#Saver#0" />
+                <element signature="n#!!block;n#RestfulSaver#0" />
+                <element signature="n#!!block;n#Finder#0" />
+                <element signature="n#!!block;n#RestfulFinder#0" />
+                <element signature="n#!!block;n#Deleter#0" />
+                <element signature="n#!!block;n#RestfulDeleter#0" />
+                <element signature="n#!!block;n#Updater#0" />
+                <element signature="n#!!block;n#RestfulUpdater#0" />
               </folding>
             </state>
           </provider>
@@ -46,39 +72,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/MongoService.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
+                <element signature="e#139#188#0" />
                 <element signature="n#!!block;n#NewMongoService#0" />
                 <element signature="n#!!block;n#Save#0" />
                 <element signature="n#!!block;n#Find#0" />
                 <element signature="n#!!block;n#Delete#0" />
+                <element signature="n#!!block;n#Delete#1" />
+                <element signature="n#!!block;n#Update#0" />
+                <element signature="n#!!block;n#UpdateID#0" />
                 <element signature="n#!!block;n#Disconnect#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/DBApiController.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-              <folding>
-                <element signature="e#21#183#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/ApplyForServiceController.go">
+        <entry file="file://$PROJECT_DIR$/service/IDBService.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-485">
-              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-              <folding>
-                <element signature="n#!!block;n#NewLoginController#0" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -103,6 +118,8 @@
       <find>Server</find>
       <find>dataAdapter.IJsonAdapter</find>
       <find>dataAdapter</find>
+      <find>func(c *gin.Context)</find>
+      <find>panic(errors.New(&quot;service should be applied first&quot;))</find>
     </findStrings>
     <replaceStrings>
       <replace>JsonDBAdapter</replace>
@@ -110,6 +127,7 @@
       <replace>uuid</replace>
       <replace>service.Server</replace>
       <replace>bson.M</replace>
+      <replace>GinHttpFunc</replace>
     </replaceStrings>
   </component>
   <component name="GOROOT" path="C:\Go" />
@@ -142,25 +160,31 @@
         <option value="$PROJECT_DIR$/controllers/LoginController.go" />
         <option value="$PROJECT_DIR$/service/ServiceFactory.go" />
         <option value="$PROJECT_DIR$/Models/User.go" />
-        <option value="$PROJECT_DIR$/serviceRegister/memServiceRegister.go" />
         <option value="$PROJECT_DIR$/serviceRegister/IServiceRegister.go" />
-        <option value="$PROJECT_DIR$/Models/UserInfo.go" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/service/ServerFactory.go" />
         <option value="$PROJECT_DIR$/dataAdapter/jsonAdaptor.go" />
         <option value="$PROJECT_DIR$/dataAdapter/IDBAdapter.go" />
-        <option value="$PROJECT_DIR$/service/IDBService.go" />
-        <option value="$PROJECT_DIR$/service/MongoService.go" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/util/Cors.go" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/serviceRegister/memServiceRegister.go" />
+        <option value="$PROJECT_DIR$/views/index.html.go" />
+        <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/controllers/ApplyForServiceController.go" />
         <option value="$PROJECT_DIR$/controllers/DBApiController.go" />
+        <option value="$PROJECT_DIR$/Models/UserInfo.go" />
+        <option value="$PROJECT_DIR$/service/IDBService.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/controllers/MongoDBApiController.go" />
+        <option value="$PROJECT_DIR$/service/MongoService.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="948" />
-    <option name="y" value="-12" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="432" />
+    <option name="y" value="-21" />
     <option name="width" value="984" />
-    <option name="height" value="1044" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -177,11 +201,6 @@
             <path>
               <item name="vsFactoryAPIEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vsFactoryAPIEngine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vsFactoryAPIEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vsFactoryAPIEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,13 +220,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\D_box\wkspc\kechuang\vsFactoryAPIEngine\vendor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\D_box\wkspc\kechuang\vsFactoryAPIEngine\util" />
       <recent name="D:\D_box\wkspc\kechuang\vsFactoryAPIEngine\serviceRegister" />
       <recent name="D:\D_box\wkspc\kechuang\vsFactoryAPIEngine" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\D_box\wkspc\kechuang\vsFactoryAPIEngine\vendor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,23 +275,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18431689" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18755053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21314387" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.330373" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30195382" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.28596804" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.22202487" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -291,9 +310,6 @@
     <proxy>https://mirrors.aliyun.com/goproxy/</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.vsn">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/vendor.json" />
     <entry file="file://$PROJECT_DIR$/$env">
       <provider selected="true" editor-type-id="text-editor" />
@@ -406,13 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="678" selection-start-line="678" selection-end-line="678" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../go/pkg/mod/github.com/gin-gonic/gin@v1.5.0/logger.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -427,23 +436,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../go/pkg/mod/github.com/globalsign/mgo@v0.0.0-20181015135952-eeefdecb41b8/session.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="307" column="5" selection-start-line="307" selection-start-column="5" selection-end-line="307" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/IController.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#21#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/IController.go" />
     <entry file="file://$PROJECT_DIR$/../../go/pkg/mod/github.com/gorilla/sessions@v1.2.0/store.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -501,17 +494,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/UserInfo.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../go/pkg/mod/github.com/gin-gonic/gin@v1.5.0/context.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="623" column="18" selection-start-line="623" selection-start-column="18" selection-end-line="623" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataAdapter/jsonAdaptor.go" />
+    <entry file="file://$PROJECT_DIR$/dataAdapter/IDBAdapter.go" />
+    <entry file="file://$PROJECT_DIR$/README.vsn">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Go/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="2801" selection-start-line="2801" selection-end-line="2801" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="678" selection-start-line="678" selection-end-line="678" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serviceRegister/memServiceRegister.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#init#0" />
+            <element signature="n#!!block;n#GetPool#0" />
+            <element signature="n#!!block;n#Valid#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/ServerFactory.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/Cors.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ApplyForServiceController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="53" column="72" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
+          <folding>
+            <element signature="n#!!block;n#NewLoginController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serviceRegister/IServiceRegister.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -522,95 +580,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataAdapter/jsonAdaptor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataAdapter/IDBAdapter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/IDBService.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="e#17#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding>
-            <element signature="e#14#86#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="161">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/ServerFactory.go">
+    <entry file="file://$PROJECT_DIR$/../../go/pkg/mod/github.com/globalsign/mgo@v0.0.0-20181015135952-eeefdecb41b8/session.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serviceRegister/IServiceRegister.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serviceRegister/memServiceRegister.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="n#!!block;n#init#0" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="2648" column="1" lean-forward="true" selection-start-line="2648" selection-start-column="1" selection-end-line="2648" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/MongoService.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
+            <element signature="e#139#188#0" />
             <element signature="n#!!block;n#NewMongoService#0" />
             <element signature="n#!!block;n#Save#0" />
             <element signature="n#!!block;n#Find#0" />
             <element signature="n#!!block;n#Delete#0" />
+            <element signature="n#!!block;n#Delete#1" />
+            <element signature="n#!!block;n#Update#0" />
+            <element signature="n#!!block;n#UpdateID#0" />
             <element signature="n#!!block;n#Disconnect#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ApplyForServiceController.go">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="209">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/IDBService.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-485">
-          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        <state relative-caret-position="209">
+          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/MongoDBApiController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="323" lean-forward="true" selection-start-line="323" selection-end-line="323" />
           <folding>
-            <element signature="n#!!block;n#NewLoginController#0" />
+            <element signature="e#236#297#0" />
+            <element signature="n#!!block;n#NewMongoDBApiController#0" />
+            <element signature="n#!!block;n#Saver#0" />
+            <element signature="n#!!block;n#RestfulSaver#0" />
+            <element signature="n#!!block;n#Finder#0" />
+            <element signature="n#!!block;n#RestfulFinder#0" />
+            <element signature="n#!!block;n#Deleter#0" />
+            <element signature="n#!!block;n#RestfulDeleter#0" />
+            <element signature="n#!!block;n#Updater#0" />
+            <element signature="n#!!block;n#RestfulUpdater#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DBApiController.go">
+    <entry file="file://$PROJECT_DIR$/Models/UserInfo.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-          <folding>
-            <element signature="e#21#183#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

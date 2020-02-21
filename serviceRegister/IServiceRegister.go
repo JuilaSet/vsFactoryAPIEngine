@@ -19,4 +19,3 @@ type IUserServicePool interface {
 	// 获取服务
 	GetServe(servername string) (service.Server, bool)
 }
-

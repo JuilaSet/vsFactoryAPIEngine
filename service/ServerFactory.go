@@ -4,11 +4,12 @@ import "errors"
 
 type Server interface{}
 
-type ServerFactory struct {}
+type ServerFactory struct{}
 
 // 单例模式
 var serverFactory *ServerFactory
-func init(){
+
+func init() {
 	serverFactory = &ServerFactory{}
 }
 
