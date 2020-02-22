@@ -1,4 +1,5 @@
 # vsFactoryAPIEngine - lsr
+## 使用Go语言开发的API服务器
 ## API 手册
 * 注册服务
 > {"servername" : "mongodb-service", "serverURL" : "mongodb://127.0.0.1:27017"}
