@@ -1,4 +1,4 @@
-# vsFactoryAPIEngine - lsr
+# vsFactoryAPIEngine - luo si rui
 ## 使用Go语言开发的API服务器
 ## API 手册
 * 注册服务
